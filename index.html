@@ -52,23 +52,23 @@ html{scroll-behavior:smooth;}
   --nav-border:rgba(37,99,235,0.1);
 }
 
-/* Theme C — Vibrant Stripe */
+/* Theme C — Rose Light Pink */
 [data-theme="C"]{
-  --bg:#FFFFFF;
-  --bg2:#FDF4FF;
+  --bg:#FFFAFA;
+  --bg2:#FFF0F3;
   --card:#FFFFFF;
-  --text:#0A0A0A;
-  --text2:#3D3D3D;
-  --muted:#6B6B6B;
-  --border:rgba(139,92,246,0.15);
-  --accent:#8B5CF6;
-  --accent2:#A78BFA;
-  --hero-bg:#0A0015;
+  --text:#1A0A0F;
+  --text2:#3D1A24;
+  --muted:#8B4A5E;
+  --border:rgba(236,72,153,0.15);
+  --accent:#EC4899;
+  --accent2:#F472B6;
+  --hero-bg:#1A000D;
   --hero-text:#FFFFFF;
-  --shadow:0 4px 24px rgba(139,92,246,0.12);
-  --shadow-lg:0 16px 64px rgba(139,92,246,0.2);
-  --nav-bg:rgba(255,255,255,0.92);
-  --nav-border:rgba(139,92,246,0.1);
+  --shadow:0 4px 24px rgba(236,72,153,0.12);
+  --shadow-lg:0 16px 64px rgba(236,72,153,0.2);
+  --nav-bg:rgba(255,250,250,0.92);
+  --nav-border:rgba(236,72,153,0.1);
 }
 
 /* Theme D — Navy Gold */
@@ -213,7 +213,7 @@ nav.scrolled{
   transition:color 1.5s ease;
 }
 [data-theme="A"] .cr-col,[data-theme="B"] .cr-col{color:rgba(37,99,235,0.35);}
-[data-theme="C"] .cr-col{color:rgba(139,92,246,0.35);}
+[data-theme="C"] .cr-col{color:rgba(236,72,153,0.35);}
 [data-theme="D"] .cr-col{color:rgba(201,168,76,0.35);}
 @keyframes cr-fall{0%{transform:translateY(-100vh);}100%{transform:translateY(200vh);}}
 
@@ -332,7 +332,7 @@ nav.scrolled{
   animation:grid-move 20s linear infinite;
 }
 [data-theme="B"] .grid-bg{background-image:linear-gradient(rgba(37,99,235,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,0.08) 1px,transparent 1px);background-size:80px 80px;}
-[data-theme="C"] .grid-bg{background-image:linear-gradient(rgba(139,92,246,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,0.08) 1px,transparent 1px);background-size:80px 80px;}
+[data-theme="C"] .grid-bg{background-image:linear-gradient(rgba(236,72,153,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(236,72,153,0.08) 1px,transparent 1px);background-size:80px 80px;}
 @keyframes grid-move{0%{background-position:0 0;}100%{background-position:80px 80px;}}
 .lightning-wrap{position:absolute;inset:0;overflow:hidden;}
 .lbolt{position:absolute;width:1px;animation:lflash linear infinite;opacity:0;}
@@ -408,12 +408,14 @@ section.alt{background:var(--bg2);}
   color:var(--text);transition:color 1.5s ease;
 }
 .big-h .hl{
+  display:inline;
   background:linear-gradient(135deg,var(--accent),var(--accent2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   transition:background 1.5s ease;
+  padding:0 4px;
 }
-[data-theme="C"] .big-h .hl{background:linear-gradient(135deg,#8B5CF6,#EC4899);}
-[data-theme="D"] .big-h .hl{background:linear-gradient(135deg,var(--gold),var(--gold2));}
+[data-theme="C"] .big-h .hl{background:linear-gradient(135deg,#EC4899,#F472B6);display:inline;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+[data-theme="D"] .big-h .hl{background:linear-gradient(135deg,var(--gold),var(--gold2));display:inline;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .big-sub{color:var(--muted);font-size:17px;line-height:1.8;max-width:560px;transition:color 1.5s ease;}
 
 /* ── HORIZONTAL SCROLL CARDS ── */
@@ -1163,7 +1165,7 @@ footer{
 const THEMES = [
   { id:'A', label:'LIGHT PREMIUM',   dur:20 },
   { id:'B', label:'MIXED DRAMA',     dur:20 },
-  { id:'C', label:'VIBRANT STRIPE',  dur:20 },
+  { id:'C', label:'ROSE PINK',       dur:20 },
   { id:'D', label:'NAVY GOLD',       dur:20 },
 ];
 let curTheme=0, themeCountdown=20, themeTimer=null;
